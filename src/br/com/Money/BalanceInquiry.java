@@ -4,7 +4,7 @@ package br.com.Money;
  * 
  * BalanceInquiry.java
  * Represents a balance inquiry ATM transaction
- * @author Tomas
+ * @author 
  *
  */
 public class BalanceInquiry extends Transaction

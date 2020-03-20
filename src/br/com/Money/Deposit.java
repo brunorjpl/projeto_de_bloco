@@ -3,7 +3,7 @@ package br.com.Money;
 /**
  * Deposit.java Represents a deposit ATM transaction
  * 
- * @author Deitel
+ * @author 
  * 
  */
 public class Deposit extends Transaction {

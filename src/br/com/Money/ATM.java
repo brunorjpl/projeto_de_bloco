@@ -3,12 +3,16 @@ package br.com.Money;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
- /**
-  * ATM.java 
-  * Represents an automated teller machine
-  * @author Bruno
-  *
-  */
+/** ATM.java
+* Represents an automated teller machine
+* @author bruno
+* @version 1.0
+* @see Screen
+* @see Keypad
+* @see CashDispenser
+* @see DepositSlot
+* @see BankDatabase
+*/
 
 public class ATM 
 {
