@@ -18,7 +18,7 @@ public class ATM
    private Keypad keypad; // ATM's keypad
    private CashDispenser cashDispenser; // ATM's cash dispenser
    private DepositSlot depositSlot; // ATM's deposit slot
-   private BankDatabase bankDatabase; // account information database
+   //private BankDatabase bankDatabase; // account information database
 
    // constants corresponding to main menu options
    private static final int BALANCE_INQUIRY = 1;
@@ -39,7 +39,7 @@ public class ATM
      keypad = new Keypad(); // create keypad 
      cashDispenser = new CashDispenser(); // create cash dispenser
      depositSlot = new DepositSlot(); // create deposit slot
-     bankDatabase = new BankDatabase(); // create acct info database   
+     BankDatabase bankDatabase = BankDatabase.getInstance(); // create acct info database   
 
   } // end no-argument ATM constructor
 
@@ -77,7 +77,7 @@ public class ATM
       
       // set userAuthenticated to boolean value returned by database
       userAuthenticated = 
-         bankDatabase.authenticateUser( accountNumber, pin );
+         BankDatabase.getInstance().authenticateUser( accountNumber, pin );
       
       // check whether authentication succeeded
       if ( userAuthenticated )
@@ -160,15 +160,15 @@ public class ATM
       {
          case BALANCE_INQUIRY: // create new BalanceInquiry transaction
             temp = new BalanceInquiry( 
-               currentAccountNumber, screen, bankDatabase );
+               currentAccountNumber, screen, BankDatabase.getInstance() );
             break;
          case WITHDRAWAL: // create new Withdrawal transaction
             temp = new Withdrawal( currentAccountNumber, screen, 
-               bankDatabase, keypad, cashDispenser );
+               BankDatabase.getInstance(), keypad, cashDispenser );
             break; 
          case DEPOSIT: // create new Deposit transaction
             temp = new Deposit( currentAccountNumber, screen, 
-               bankDatabase, keypad, depositSlot );
+               BankDatabase.getInstance(), keypad, depositSlot );
             break;
       } // end switch
 
