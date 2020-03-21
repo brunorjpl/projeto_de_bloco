@@ -88,4 +88,12 @@ public class Account {
 		return null;
 	}
 
+	/**
+	 * Método toStringWrite() da Classe de Contas para BufferedWriter
+	 * @return String
+	 **/
+	public String toStringWriter() {
+		return accountNumber+","+pin+","+availableBalance+","+totalBalance;
+	}
+
 } // end class Account

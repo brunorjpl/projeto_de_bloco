@@ -2,7 +2,7 @@ package br.com.Money;
 
 /**
  * FAO.java
- * 
+ *  Lê e Persiste os dados
  */
 
 import java.io.BufferedReader;
@@ -20,6 +20,12 @@ import java.util.ArrayList;
 
 public class FAO {
 
+	
+	/**
+	 * Método Responsável por ler o Arquivo
+	 * @param accounts ArrayList
+	 **/
+	
 	public void readFile(ArrayList<Account> contas) throws FileNotFoundException, IOException {
 		Path path = Paths.get("Accounts.txt");
 
@@ -28,7 +34,7 @@ public class FAO {
 			String line;
 			String linha[] = new String[4];
 			while ((line = reader.readLine()) != null) {
-				System.out.println(line);
+			//	System.out.println(line);
 				linha = line.split(",");
 				int accountNumber = Integer.parseInt(linha[0]);
 				int pin = Integer.parseInt(linha[1]);
@@ -53,31 +59,33 @@ public class FAO {
 
 	}
 
+	/**
+	 * Método Responsável por gravar os dados
+	 * @param accounts ArrayList
+	 **/
+	
 	public void writeFile(ArrayList<Account> contas) throws FileNotFoundException, IOException {
 		Path path = Paths.get("Accounts.txt");
-		PrintWriter out;
-		// try {
-
+		
 		try {
-			BufferedWriter writer = Files.newBufferedWriter(path, Charset.defaultCharset(), StandardOpenOption.WRITE);
-			out = new PrintWriter(writer);
-			for (Account conta : contas) {
-				out.println(conta);
-			}
-
-			if (out != null)
-				out.close();
-			if (writer != null)
-				writer.close();
-
-			/*
-			 * BufferedReader reader = Files.newBufferedReader(path,
-			 * Charset.defaultCharset()); BufferedWriter writer =
-			 * Files.newBufferedWriter(path, Charset.defaultCharset(),
-			 * StandardOpenOption.WRITE); String line; while ((line = reader.readLine()) !=
-			 * null) { writer.write(line); } reader.close(); writer.close();
-			 */
-		} catch (FileNotFoundException x) {
+			BufferedReader reader = Files.newBufferedReader(path);
+			BufferedWriter writer = Files.newBufferedWriter(path);		
+			contas.forEach(data -> {
+			
+				System.out.println(data.toStringWriter());
+				try {
+					writer.write(data.toStringWriter());
+					writer.newLine();
+				} catch (IOException e) {
+					System.err.format("IOException %s%n", e);
+				}				
+			});
+							
+			writer.flush();
+			writer.close();
+			reader.close();
+			
+		}catch (FileNotFoundException x) {
 			System.err.format("FileNotFoundException: %s%n", x);
 		} catch (IOException ex) {
 			System.err.format("IOException: %s%n", ex);
