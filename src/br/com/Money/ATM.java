@@ -6,7 +6,7 @@ import java.io.IOException;
 /** ATM.java
 * Represents an automated teller machine
 * @author bruno
-* @version 1.0
+* @version 1.0.1
 * @see Screen
 * @see Keypad
 * @see CashDispenser
