@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 
 /**
  * ATMCaseStudy.java 
- * Driver program for the ATM case study
+ * Projeto de Bloco
  * @author Bruno
  *
  */

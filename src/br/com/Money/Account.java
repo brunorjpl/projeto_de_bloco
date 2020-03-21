@@ -63,7 +63,8 @@ public class Account {
 	 * @param amount
 	 */
 	public void credit(double amount) {
-		totalBalance += amount; // add to total balance
+		totalBalance += amount;
+		availableBalance += amount;// add to total balance
 	} // end method credit
 
 // debits an amount from the account

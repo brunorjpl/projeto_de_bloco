@@ -126,6 +126,7 @@ public class ATM
             case EXIT: // user chose to terminate session
                screen.displayMessageLine( "\nExiting the system..." );
                userExited = true; // this ATM session should end
+               //System.exit(0);
                break;
             default: // user did not enter an integer from 1-4
                screen.displayMessageLine( 
@@ -174,6 +175,7 @@ public class ATM
             temp = new Deposit( currentAccountNumber, screen, 
                BankDatabase.getInstance(), keypad, depositSlot );
             break;
+
       } // end switch
 
       return temp; // return the newly created object
