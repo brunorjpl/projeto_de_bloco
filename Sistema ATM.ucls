@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="br.com.Money.Keypad" project="ATM" file="/ATM/src/br/com/Money/Keypad.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="117" width="96" x="956" y="899"/>    
+    <position height="-1" width="-1" x="1224" y="937"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="br.com.Money.CashDispenser" project="ATM" 
     file="/ATM/src/br/com/Money/CashDispenser.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="209" x="45" y="899"/>    
+    <position height="-1" width="-1" x="135" y="1099"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="br.com.Money.BalanceInquiry" project="ATM" 
     file="/ATM/src/br/com/Money/BalanceInquiry.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="227" x="476" y="706"/>    
+    <position height="-1" width="-1" x="613" y="759"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="br.com.Money.Screen" project="ATM" file="/ATM/src/br/com/Money/Screen.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="187" x="436" y="899"/>    
+    <position height="-1" width="-1" x="521" y="1040"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -93,7 +93,7 @@
   </class>  
   <class id="11" language="java" name="br.com.Money.Deposit" project="ATM" file="/ATM/src/br/com/Money/Deposit.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="289" x="785" y="706"/>    
+    <position height="-1" width="-1" x="951" y="744"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="br.com.Money.DepositSlot" project="ATM" 
     file="/ATM/src/br/com/Money/DepositSlot.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="172" x="1092" y="899"/>    
+    <position height="-1" width="-1" x="1358" y="750"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -111,7 +111,7 @@
   </class>  
   <class id="13" language="java" name="br.com.Money.BankDatabase" project="ATM" 
     file="/ATM/src/br/com/Money/BankDatabase.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="207" width="182" x="724" y="899"/>    
+    <position height="-1" width="-1" x="891" y="1076"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -205,6 +205,7 @@
   <association id="40">    
     <bendpoint x="56" y="495"/>    
     <bendpoint x="56" y="706"/>    
+    <bendpoint x="86" y="934"/>    
     <end type="SOURCE" refId="7" navigable="false">      
       <attribute id="41" name="screen"/>      
       <multiplicity id="42" minimum="0" maximum="1"/>    
@@ -236,6 +237,7 @@
   <association id="49">    
     <bendpoint x="35" y="495"/>    
     <bendpoint x="35" y="706"/>    
+    <bendpoint x="50" y="886"/>    
     <end type="SOURCE" refId="7" navigable="false">      
       <attribute id="50" name="cashDispenser"/>      
       <multiplicity id="51" minimum="0" maximum="1"/>    
@@ -245,6 +247,7 @@
   </association>  
   <dependency id="52">    
     <bendpoint x="480" y="495"/>    
+    <bendpoint x="482" y="676"/>    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="8"/>  
   </dependency>  
